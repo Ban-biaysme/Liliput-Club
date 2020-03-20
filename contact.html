@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LILIPUT CLUB- WELLINGTON</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- "Normalize. css is a small CSS file that provides better cross-browser consistency in the default styling of HTML elements. It's a modern,
+     HTML5-ready, alternative to the traditional CSS reset."-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+<!-- Jvascript file to for toggle menu for mobile device and large screen device-->
+<script src="JavaScript/app.js"></script>
+
+<!-- Bootstrap core CSS -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Style sheet for the HTML page-->
+<link rel="stylesheet" href="CSS/contact-style.css">
+<link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+
+<!-- Form validation script-->
+<script src="JavaScript/contact-script.js"></script>
+
+</head>
+
+<body>
+<nav class="nav-wrapper">
+  <div class="logo1"> 
+      <i class="fas fa-sun"></i> <strong> LILIPUT </strong> 
+  </div>
+  <div class="burger-icon"><i class="fas fa-bars"></i> MENU</div>
+  <ul class="nav-items main-nav mobile-hide">
+    <li class="list-item"><a href="index.html">Home</a></li>
+    <li class="list-item"><a href="about.html">About Us</a></li>
+    <li class="list-item"><a href="gallery.html">Gallery</a></li>
+    <li class="list-item"><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+
+<div class="main-wrapper">
+  <div class="wrapper">
+    <div class="featured">
+      <h1>ENQUIRE US</h1>
+    </div>
+
+    <div class="main-content">
+        <div class="row">
+            <div class="col-lg-8 mb-4">
+                <span id="hero-date"><strong><h3>Drop us a line!</h3></strong></span> 
+              <form id="contact-form" action="success.html" method="post" onsubmit= "return checkForm()">	
+
+                <div class="control-group form-group">
+                  <div class="controls">
+                    <label>FIRST NAME:</label>
+                    <input type="text" class="form-control" id="firstname" required data-validation-required-message="Please enter your name.">
+                    <p class="help-block"></p>
+                    <span id="firstname_msg"></span>
+                  </div>
+                </div>
+
+                <div class="control-group form-group">
+                    <div class="controls">
+                      <label>LAST NAME:</label>
+                      <input type="text" class="form-control" id="familyname" required data-validation-required-message="Please enter your name.">
+                      <p class="help-block"></p>
+                      <span id="familyname_msg"></span>
+                    </div>
+                  </div>
+
+                <div class="control-group form-group">
+                  <div class="controls">
+                    <label>PHONE NO:</label>
+                    <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter 10 digit phone number.">
+                    <span id="ph_msg"></span>
+                  </div>
+                </div>
+
+                <div class="control-group form-group">
+                  <div class="controls">
+                    <label>EMAIL ADDRESS:</label>
+                    <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+                    <span id="email_msg"></span>
+                  </div>
+                </div>
+                <div class="control-group form-group">
+                  <div class="controls">
+                    <label>MESSAGE:</label>
+                    <textarea rows="10" cols="50" class="form-control" id="message"  data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                  </div>
+                </div>
+                <div id="success"></div>
+                <!-- For success/fail messages -->
+                <button type="submit" class="btn btn-primary" id="submit">SUBMIT</button>
+              </form>
+            </div>
+      
+          </div>
+
+    </div>
+
+
+    <div class="main-sidebar">
+ 
+            <!-- Embedded Google Map -->
+            <iframe id="gmap" height="300px"  frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25629.785908597572!2d174.66393627534663!3d-36.584886709301415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d23fdd04a77c7%3A0x500ef6143a2f0b0!2sOrewa!5e0!3m2!1sen!2snz!4v1584242557274!5m2!1sen!2snz"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+      <hr><br>
+      <div class="email-digest-subscription">
+        <h3>MAKE A MEMBERSHIP</h3>
+        <p>Join Liliput Club today and get all the news of our upcoming events for your kid/s! </p>
+        <form id="subscribe" action="#" accept-charset="UTF-8" method="post">
+          <input placeholder="Email Address" class="email" name="email" id="email" type="email">
+          <button name="button" type="submit" class="subscribe">Subscribe Me</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<footer class="footer">
+  <div class="foot1">
+    <h3 class="logo" style="text-align: left;">Liliput Club</h3>
+    <p>Liliput Group NZ Head Office</p>
+    <p>PO Box 107, Orewa 9999</p>
+    <p>Phone: (09)999 9999</p>
+    <p>admin@liliputclub.co.nz</p>
+  </div>
+  <div class="foot2">
+    <h4>Awesome Links</h4>
+    <ul class="fa-ul social-footer">
+      <li><span class="fa-li" ><i class="fas fa-check-square"></i></span>HELP</li>
+      <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Privacy Policy</li>
+      <li><span class="fa-li"><i class="far fa-check-square"></i></span>Liliput Sport</li>
+    </ul>
+  </div>
+  <div class="foot3">
+    <h4>Affiliated with Liliput Sports</h4>
+    <p>Liliput Club is closely aligned with Liliput Sports.
+      Liliput Sports has been providing a range of curricular and extra-curricular sporting programmes for children in New Zealand since 2009. </p>
+  </div>
+  <div class="foot4">
+    <h4>Social Media</h4>
+    <a href="https://www.facebook.com/"><img alt="facebook" src="Images/facebook.jpg" width="40px" height="40px"></a>
+		<a href="https://www.youtube.com/"><img alt="youtube" src="Images/youtube.jpg" width="40px" height="40px"></a>
+
+  </div>
+  <div class="copyright">© 2020, Liliput Group NZ Ltd. All rights reserved.</div>
+</footer>
+
+
+  <!-- Bootstrap core JavaScript 
+  <script src="jquery/jquery.min.js"></script>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>-->
+
+
+
+</body>
+</html>
