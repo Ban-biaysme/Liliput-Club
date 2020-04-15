@@ -9,7 +9,8 @@ $(document).ready(function() {
 	  if($( ".main-nav" ).hasClass( "mobile-hide" )){
 		    $(".main-nav").removeClass("mobile-hide");
 		    $(".main-nav").addClass("mobile-show");
-	  }else{
+	  }
+	  else{
 		      $(".main-nav").addClass("mobile-hide");
 		      $(".main-nav").removeClass("mobile-show");
 	  }

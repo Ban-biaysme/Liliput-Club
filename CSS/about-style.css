@@ -111,6 +111,12 @@
     max-width: 650px;
 }
 
+
+/*  About page header section  text animation */
+.about-hd {
+    letter-spacing: 0.5em;
+  }
+  
 .sub-featured{
     grid-area: featuredSub;
     background-color: rgb(19, 18, 18); 

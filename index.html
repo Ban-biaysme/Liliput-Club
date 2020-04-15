@@ -12,24 +12,22 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
-
 <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
 
-<link href="css/StyleSheet-All.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
   <!-- Bootstrap core CSS -->
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Style sheet for the HTML page-->
-<link rel="stylesheet" href="CSS/index-style.css">
-
  <!-- Bootstrap core JavaScript -->
  <script src="jquery/jquery.min.js"></script>
  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+   <!-- Style sheet for the HTML page-->
+<link rel="stylesheet" href="CSS/index-style.css">
+
  <!-- Jvascript file to for toggle menu for mobile device and large screen device-->
 <script src="JavaScript/app.js"></script>
-
 </head>
 
 <body>
@@ -63,29 +61,46 @@
               <!-- Slide One - Set the background image for this slide in the line below -->
               <div class="carousel-item active" style="background-image: url('Images/about-carousel-img6.jpg')">
                 <div class="carousel-caption d-none d-md-block">
-                  <h3>Every Child Has A Place</h3>
-                  <h4>We Do Not Exclude.</h4>
+                  <h3 class="carousel-hd text-uppercase cr-cap">
+                    <span class="text-wrapper">
+                      <span class="letters">Every Child Has A Place</span>
+                      <span class="line"></span>
+                    </span></h3>
+                    <h4>We Do Not Exclude.</h4> 
                 </div>
               </div>
               <!-- Slide Two - Set the background image for this slide in the line below -->
               <div class="carousel-item" style="background-image: url('Images/about-carousel-img2.jpg')">
                 <div class="carousel-caption d-none d-md-block">
-                  <h3>Child Needing Help with Motivation?</h3>
+                    <h3 class="carousel-hd text-uppercase cr-cap">
+                        <span class="text-wrapper">
+                          <span class="letters">Child Needing Help with Motivation?</span>
+                          <span class="line"></span>
+                        </span>
+                    </h3>
                   <h4>Developing Confidence & Social Awareness Is Our Specialty..</h4>
                 </div>
               </div>
               <!-- Slide Three - Set the background image for this slide in the line below -->
               <div class="carousel-item" style="background-image: url('Images/about-carousel-img3.jpg')">
                 <div class="carousel-caption d-none d-md-block">
-                  <h3>No TV, No Video Games</h3>
-                  <h4>Just Fun, Innovative, and Quality Childcare.</h4>
+                  <h3 class="carousel-hd text-uppercase cr-cap">
+                    <span class="text-wrapper">
+                      <span class="letters">No TV, No Video Games</span>
+                      <span class="line"></span>
+                    </span></h3>
+                    <h4>Just Fun, Innovative, and Quality Childcare.</h4>               
                 </div>
               </div>
 
                <!-- Slide four - Set the background image for this slide in the line below -->
                <div class="carousel-item" style="background-image: url('Images/about-carousel-img1.jpg')">
                 <div class="carousel-caption d-none d-md-block">
-                  <h3>Growing Lifelong Curiosity</h3>
+                  <h3 class="carousel-hd text-uppercase cr-cap">
+                    <span class="text-wrapper">
+                      <span class="letters">Growing Lifelong Curiosity</span>
+                      <span class="line"></span>
+                    </span></h3>
                   <h4>Fun, Educational, Engaging & Interactive Childcare.</h4>
                 </div>
               </div>
@@ -93,7 +108,11 @@
                <!-- Slide five - Set the background image for this slide in the line below -->
                <div class="carousel-item" style="background-image: url('Images/about-carousel-img8.jpg')">
                 <div class="carousel-caption d-none d-md-block">
-                  <h3>Child Needing Help with Motivation?</h3>
+                  <h3 class="carousel-hd text-uppercase cr-cap">
+                    <span class="text-wrapper">
+                      <span class="letters">Child Needing Help with Motivation?</span>
+                      <span class="line"></span>
+                    </span></h3>
                   <h4>Fun, Educational, Engaging & Interactive Childcare.</h4>
                 </div>
               </div>
@@ -101,7 +120,11 @@
                <!-- Slide six - Set the background image for this slide in the line below -->
                <div class="carousel-item" style="background-image: url('Images/about-carousel-img9.jpg')">
                 <div class="carousel-caption d-none d-md-block">
-                  <h3>Child Needing Help with Motivation?</h3>
+                  <h3 class="carousel-hd text-uppercase cr-cap">
+                    <span class="text-wrapper">
+                      <span class="letters">Child Needing Help with Motivation?</span>
+                      <span class="line"></span>
+                    </span></h3>
                   <h4>Fun, Educational, Engaging & Interactive Childcare.</h4>
                 </div>
               </div>
@@ -119,7 +142,8 @@
     </div>
 
         <div class="featured1">
-            <h1> THE LILIPUT CLUB STORY</h1>
+            <h1> 
+              THE LILIPUT CLUB STORY</h1>
             <p>Liliput Club was launched in New Zealand in 2009 to meet the gap in the market for quality child care programmes that offer flexible
                  booking arrangements for busy parents. Our mission is to create a home away from home that kids love coming to, and that parents
                   can trust to provide a caring and safe environment.</p>
@@ -180,6 +204,37 @@
   <div class="copyright">© 2020, Liliput Group NZ Ltd. All rights reserved.</div>
 </footer>
 
+<!-- Index page Carausol Text animation-->
+<script>
+  // Wrap every letter in a span
+  var textWrapper = document.querySelector('.cr-cap .letters');
+  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+  anime.timeline({loop: true})
+    .add({
+      targets: '.cr-cap .line',
+      scaleX: [0,1],
+      opacity: [0.5,1],
+      easing: "easeInOutExpo",
+      duration: 900
+    }).add({
+      targets: '.cr-cap .letter',
+      opacity: [0,1],
+      translateX: [40,0],
+      translateZ: 0,
+      scaleX: [0.3, 1],
+      easing: "easeOutExpo",
+      duration: 800,
+      offset: '-=600',
+      delay: (el, i) => 150 + 25 * i
+    }).add({
+      targets: '.cr-cap',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 1000
+    });
+</script>
 
 </body>
 </html>
